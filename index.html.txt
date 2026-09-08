@@ -3,60 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lil Ducky TCG</title>
+    <title>Lil Ducky TCG - Legendary Showcase</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Google Fonts for Pokémon-style headers -->
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <!-- Header Banner -->
-    <header class="hero-banner">
-        <div class="pokeball-bg"></div>
-        <div class="header-content">
+    <!-- Header -->
+    <header class="main-header">
+        <div class="logo-area">
             <h1 class="brand-title">LIL DUCKY TCG</h1>
             <p class="tagline">Gotta Collect 'Em All!</p>
         </div>
     </header>
 
-    <!-- Navigation Bar -->
+    <!-- Navigation -->
     <nav class="navbar">
-        <a href="#collection">Collection</a>
-        <a href="#featured">Featured Cards</a>
+        <a href="#featured">Featured</a>
+        <a href="#legends">Legendary Showcase</a>
         <a href="#about">About</a>
     </nav>
 
     <!-- Main Content -->
     <main class="container">
         
-        <section id="featured" class="section">
-            <h2>Featured Pulls</h2>
-            <div class="card-grid">
-                
-                <div class="tcg-card">
-                    <div class="card-badge fire">Fire</div>
-                    <h3>Charizard Ex</h3>
-                    <p class="card-rarity">★★ Special Illustration Rare</p>
-                    <p class="card-desc">Welcome to Lil Ducky TCG! Check out our latest pulls, trade binders, and favorite cards.</p>
-                </div>
+        <!-- Legendary Showcase Section -->
+        <section id="legends" class="legends-showcase">
+            <h2 class="section-title">THE LEGENDARY ALIGNMENT</h2>
+            <p class="section-intro">Experience the converging power of the ancient legends. Explore the Tiers of Power.</p>
 
-                <div class="tcg-card">
-                    <div class="card-badge water">Water</div>
-                    <h3>Psyduck</h3>
-                    <p class="card-rarity">★ Illustration Rare</p>
-                    <p class="card-desc">The mascot of Lil Ducky TCG! Always here, always suffering from a headache.</p>
+            <!-- Tier 1: The Cosmic Pantheon -->
+            <div class="tier-block tier-1">
+                <div class="tier-content">
+                    <div class="tier-art">
+                        <img src="legendary_tier_1.jpg" alt="Art from Tier 1 Pantheon">
+                    </div>
+                    <div class="tier-details">
+                        <h3 class="tier-name">TIER 1: THE COSMIC PANTHEON</h3>
+                        <p class="tier-desc">The ultimate architects of reality, time, space, and existence. Their power is absolute.</p>
+                        <ul class="legend-list">
+                            <li><span class="pkm-icon mewtwo"></span> Mewtwo & Mew</li>
+                            <li><span class="pkm-icon arceus"></span> Arceus</li>
+                            <li><span class="pkm-icon rayquaza"></span> Rayquaza (Shiny)</li>
+                            <li><span class="pkm-icon kyogre"></span> Kyogre & Groudon</li>
+                            <li><span class="pkm-icon deoxys"></span> Deoxys</li>
+                        </ul>
+                    </div>
                 </div>
-
-                <div class="tcg-card">
-                    <div class="card-badge electric">Electric</div>
-                    <h3>Pikachu</h3>
-                    <p class="card-rarity">★ Secret Rare</p>
-                    <p class="card-desc">Add your favorite cards, deck lists, or trade availability right here!</p>
-                </div>
-
             </div>
+
+            <!-- Tier 2: Ancient Rulers -->
+            <div class="tier-block tier-2">
+                <div class="tier-content">
+                    <div class="tier-art">
+                        <img src="legendary_tier_2.jpg" alt="Art from Tier 2 Ancient Rulers">
+                    </div>
+                    <div class="tier-details">
+                        <h3 class="tier-name">TIER 2: ANCIENT RULERS</h3>
+                        <p class="tier-desc">Guardians of ancient dimensions and elemental forces. Their conflicts reshaped the worlds.</p>
+                        <ul class="legend-list">
+                            <li><span class="pkm-icon yveltal"></span> Yveltal & Lugia (Shiny)</li>
+                            <li><span class="pkm-icon giratina"></span> Giratina (Origin)</li>
+                            <li><span class="pkm-icon hooh"></span> Ho-Oh</li>
+                            <li><span class="pkm-icon dialga"></span> Dialga (Primal/Origin)</li>
+                            <li><span class="pkm-icon palkia"></span> Palkia (Origin)</li>
+                            <li><span class="pkm-icon suicune"></span> Suicune</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tier 3: Elemental Guardians -->
+            <div class="tier-block tier-3">
+                <div class="tier-content">
+                    <div class="tier-art">
+                        <img src="legendary_tier_3.jpg" alt="Art from Tier 3 Elemental Guardians">
+                    </div>
+                    <div class="tier-details">
+                        <h3 class="tier-name">TIER 3: ELEMENTAL GUARDIANS</h3>
+                        <p class="tier-desc">Forceful protectors of ecosystems, weather, and the foundations of life.</p>
+                        <ul class="legend-list">
+                            <li><span class="pkm-icon xerneas"></span> Xerneas & Solgaleo</li>
+                            <li><span class="pkm-icon lunala"></span> Lunala</li>
+                            <li><span class="pkm-icon regis"></span> The Regi Titans (Ice, Steel, Rock)</li>
+                            <li><span class="pkm-icon beasts"></span> Entei & Raikou</li>
+                            <li><span class="pkm-icon birds"></span> Zapdos, Moltres, Articuno</li>
+                            <li><span class="pkm-icon marshadow"></span> Marshadow & Diancie</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
         </section>
 
+        <!-- About Section (Kept from previous build) -->
         <section id="about" class="section about-box">
             <h2>About Lil Ducky TCG</h2>
             <p>Welcome to my personal Pokémon Trading Card Game page! Here I share my personal collection, recent booster pack pulls, and trades.</p>
@@ -64,6 +105,7 @@
 
     </main>
 
+    <!-- Footer (Kept from previous build) -->
     <footer>
         <p>Lil Ducky TCG &copy; 2026 | Pokémon is &reg; Nintendo / Creatures Inc. / GAME FREAK</p>
     </footer>
