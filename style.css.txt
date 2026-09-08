@@ -1,0 +1,166 @@
+/* Reset and Base Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    background-color: #1a1a24;
+    color: #f1f1f1;
+    line-height: 1.6;
+}
+
+/* Header Banner */
+.hero-banner {
+    background: linear-gradient(135deg, #e61c24 0%, #b30006 100%);
+    padding: 3rem 1rem;
+    text-align: center;
+    position: relative;
+    border-bottom: 6px solid #ffcb05;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+}
+
+/* Retro Pixel Font for Header */
+.brand-title {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 2.2rem;
+    color: #ffcb05;
+    text-shadow: 3px 3px 0px #3b4cca, -2px -2px 0px #3b4cca, 2px -2px 0px #3b4cca, -2px 2px 0px #3b4cca;
+    letter-spacing: 2px;
+    margin-bottom: 0.8rem;
+}
+
+.tagline {
+    font-weight: 800;
+    font-size: 1.1rem;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+}
+
+/* Navigation Bar */
+.navbar {
+    background-color: #111118;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 0.8rem;
+    border-bottom: 2px solid #2a2a3a;
+}
+
+.navbar a {
+    color: #ffcb05;
+    text-decoration: none;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    transition: color 0.2s ease;
+}
+
+.navbar a:hover {
+    color: #ffffff;
+}
+
+/* Layout */
+.container {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.section {
+    margin-bottom: 3rem;
+}
+
+.section h2 {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1.2rem;
+    color: #ffcb05;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+/* Card Grid Layout */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.tcg-card {
+    background: #252533;
+    border: 3px solid #3b4cca;
+    border-radius: 12px;
+    padding: 1.5rem;
+    position: relative;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tcg-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(255, 203, 5, 0.2);
+    border-color: #ffcb05;
+}
+
+/* Card Badges */
+.card-badge {
+    display: inline-block;
+    padding: 0.2rem 0.6rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #fff;
+    margin-bottom: 0.8rem;
+}
+
+.fire { background-color: #ff4422; }
+.water { background-color: #3399ff; }
+.electric { background-color: #ffcc33; color: #000; }
+
+.tcg-card h3 {
+    font-size: 1.3rem;
+    color: #ffffff;
+    margin-bottom: 0.2rem;
+}
+
+.card-rarity {
+    color: #ffcb05;
+    font-size: 0.85rem;
+    margin-bottom: 0.8rem;
+}
+
+.card-desc {
+    font-size: 0.95rem;
+    color: #cccccc;
+}
+
+/* About Box */
+.about-box {
+    background-color: #252533;
+    border-left: 5px solid #e61c24;
+    padding: 1.5rem;
+    border-radius: 4px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: #111118;
+    color: #777;
+    font-size: 0.8rem;
+    border-top: 1px solid #2a2a3a;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 600px) {
+    .brand-title {
+        font-size: 1.4rem;
+    }
+}
