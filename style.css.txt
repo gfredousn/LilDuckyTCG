@@ -7,49 +7,50 @@
 
 body {
     font-family: 'Outfit', sans-serif;
-    background-color: #1a1a24;
+    /* Cosmic Gradient matching the provided artwork */
+    background: radial-gradient(circle at top, #1a0a2a 0%, #0d0118 70%, #000000 100%);
     color: #f1f1f1;
     line-height: 1.6;
+    overflow-x: hidden; /* Prevent horizontal scroll from animation */
 }
 
-/* Header Banner */
-.hero-banner {
+/* Header */
+.main-header {
     background: linear-gradient(135deg, #e61c24 0%, #b30006 100%);
-    padding: 3rem 1rem;
+    padding: 2.5rem 1rem;
     text-align: center;
-    position: relative;
     border-bottom: 6px solid #ffcb05;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7);
 }
 
-/* Retro Pixel Font for Header */
 .brand-title {
     font-family: 'Press Start 2P', cursive;
-    font-size: 2.2rem;
+    font-size: 2rem;
     color: #ffcb05;
     text-shadow: 3px 3px 0px #3b4cca, -2px -2px 0px #3b4cca, 2px -2px 0px #3b4cca, -2px 2px 0px #3b4cca;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     margin-bottom: 0.8rem;
 }
 
 .tagline {
     font-weight: 800;
-    font-size: 1.1rem;
+    font-size: 1rem;
     color: #ffffff;
     text-transform: uppercase;
     letter-spacing: 1.5px;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
 }
 
-/* Navigation Bar */
+/* Navigation */
 .navbar {
     background-color: #111118;
     display: flex;
     justify-content: center;
-    gap: 2rem;
+    gap: 1.5rem;
     padding: 0.8rem;
     border-bottom: 2px solid #2a2a3a;
+    position: sticky; /* Keeps nav visible when scrolling */
+    top: 0;
+    z-index: 100;
 }
 
 .navbar a {
@@ -57,7 +58,7 @@ body {
     text-decoration: none;
     font-weight: 600;
     text-transform: uppercase;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     transition: color 0.2s ease;
 }
 
@@ -65,102 +66,145 @@ body {
     color: #ffffff;
 }
 
-/* Layout */
+/* Container */
 .container {
-    max-width: 1000px;
+    max-width: 1100px;
     margin: 2rem auto;
     padding: 0 1rem;
 }
 
-.section {
-    margin-bottom: 3rem;
-}
-
-.section h2 {
+/* Section H2 (shared with About) */
+.section-title, .about-box h2 {
     font-family: 'Press Start 2P', cursive;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     color: #ffcb05;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
     text-align: center;
+    text-transform: uppercase;
 }
 
-/* Card Grid Layout */
-.card-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.5rem;
+.section-intro {
+    text-align: center;
+    color: #cccccc;
+    max-width: 700px;
+    margin: 0 auto 3rem auto;
 }
 
-.tcg-card {
-    background: #252533;
-    border: 3px solid #3b4cca;
+/* Legendary Showcase Layout */
+.legends-showcase {
+    margin-bottom: 4rem;
+}
+
+.tier-block {
+    margin-bottom: 3rem;
+    opacity: 0; /* Hidden initially for animation */
+    transform: translateY(30px);
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+/* Cascading Animation Delays */
+.tier-1 { animation-delay: 0.2s; }
+.tier-2 { animation-delay: 0.5s; }
+.tier-3 { animation-delay: 0.8s; }
+
+.tier-content {
+    background: rgba(30, 10, 50, 0.4);
+    border: 2px solid #3b4cca;
     border-radius: 12px;
     padding: 1.5rem;
-    position: relative;
-    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.tcg-card:hover {
+.tier-block:hover .tier-content {
     transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(255, 203, 5, 0.2);
+    box-shadow: 0 8px 25px rgba(255, 203, 5, 0.25);
     border-color: #ffcb05;
 }
 
-/* Card Badges */
-.card-badge {
-    display: inline-block;
-    padding: 0.2rem 0.6rem;
-    border-radius: 20px;
-    font-size: 0.75rem;
-    font-weight: 800;
-    text-transform: uppercase;
-    color: #fff;
-    margin-bottom: 0.8rem;
+/* Legendary Artwork */
+.tier-art img {
+    max-width: 320px;
+    height: auto;
+    border-radius: 8px;
+    border: 3px solid #f1f1f1;
+    display: block;
 }
 
-.fire { background-color: #ff4422; }
-.water { background-color: #3399ff; }
-.electric { background-color: #ffcc33; color: #000; }
+/* Legendary Details */
+.tier-details {
+    flex: 1;
+}
 
-.tcg-card h3 {
-    font-size: 1.3rem;
+.tier-name {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1rem;
     color: #ffffff;
-    margin-bottom: 0.2rem;
+    margin-bottom: 0.5rem;
 }
 
-.card-rarity {
-    color: #ffcb05;
-    font-size: 0.85rem;
-    margin-bottom: 0.8rem;
-}
-
-.card-desc {
+.tier-desc {
+    color: #aaaaaa;
     font-size: 0.95rem;
-    color: #cccccc;
+    margin-bottom: 1.2rem;
 }
 
-/* About Box */
+/* Legend List */
+.legend-list {
+    list-style: none;
+    color: #e0e0e0;
+    font-size: 0.95rem;
+}
+
+.legend-list li {
+    margin-bottom: 0.4rem;
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+}
+
+/* About Box (minimal changes, matches new containers) */
 .about-box {
-    background-color: #252533;
-    border-left: 5px solid #e61c24;
+    background-color: rgba(30, 30, 50, 0.5);
+    border: 2px solid #3b4cca;
     padding: 1.5rem;
-    border-radius: 4px;
+    border-radius: 8px;
 }
 
-/* Footer */
+/* Footer (Kept from previous build) */
 footer {
     text-align: center;
     padding: 2rem;
     background-color: #111118;
     color: #777;
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     border-top: 1px solid #2a2a3a;
 }
 
-/* Mobile Responsiveness */
-@media (max-width: 600px) {
-    .brand-title {
-        font-size: 1.4rem;
+/* Animation Keyframes */
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
+}
+
+/* Responsive Design */
+@media (max-width: 850px) {
+    .tier-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .tier-art img {
+        max-width: 100%;
+        margin-bottom: 1rem;
+    }
+    .legend-list li {
+        justify-content: center;
+    }
+}
+@media (max-width: 600px) {
+    .brand-title { font-size: 1.3rem; }
 }
